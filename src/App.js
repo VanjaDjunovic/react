@@ -1,10 +1,14 @@
 
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import OrdersPage from './components/OrdersPage';
 function App() {
   return (
-    <div>
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='*' element={<OrdersPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
