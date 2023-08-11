@@ -12,3 +12,8 @@ export async function getOrders(email = '', page = 1, size = 20) {
     });
     return res.data;
 }
+
+export async function getOrder(id) {
+    const res = await axios.get(URL + '/orders/' + id);
+    return res.data;
+}
